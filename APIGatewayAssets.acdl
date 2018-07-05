@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <asset_composite name="APIGatewayAssets" displayName="Assets for API Gateway" runtimeVersion="10.1" targetNamespace="http://namespaces.softwareag.com/webMethods/APIGateway" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
-    <buildInfo name="BuildTimestamp" value="2018-07-04T22:44:06"/>
-    <asset name="AdministratorSetting.mobileApp" displayName="mobileApp" isDeployable="true">
-        <implementation.generic type="AdministratorSetting"/>
-    </asset>
-    <asset name="Policy.GlobalLogInvocationPolicy" displayName="Transaction logging[Global Policy]" isDeployable="true">
-        <implementation.generic type="Policy"/>
-        <dependsOn>APIGateway:PolicyAction.GlobalLogInvocationPolicyAction</dependsOn>
-    </asset>
-    <asset name="PolicyAction.GlobalLogInvocationPolicyAction" displayName="Policy Action [Log Invocation] -&gt; Transaction logging" isDeployable="true">
-        <implementation.generic type="PolicyAction"/>
-    </asset>
+    <buildInfo name="BuildTimestamp" value="2018-07-04T23:05:33"/>
     <asset name="Alias.194b1272-a0dd-4cd1-a9c3-3e2e5aaf1afb" displayName="PingFederate" isDeployable="true">
         <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="Application.c629102f-8a81-46a4-9151-cfd57c4b96b5" displayName="soapui" isDeployable="true">
+        <implementation.generic type="Application"/>
+        <dependsOn>APIGateway:API.fba20861-453f-4918-9d79-1c04ec3c4bcb</dependsOn>
+        <dependsOn>APIGateway:PassmanData.API_ACCESS_KEYc629102f-8a81-46a4-9151-cfd57c4b96b5</dependsOn>
+    </asset>
+    <asset name="API.fba20861-453f-4918-9d79-1c04ec3c4bcb" displayName="Math2Demo[1]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Application.0969eb22-aef6-4d95-b8c1-5aa277746d44</dependsOn>
+        <dependsOn>APIGateway:Application.c629102f-8a81-46a4-9151-cfd57c4b96b5</dependsOn>
+        <dependsOn>APIGateway:Policy.61926066-0c83-4859-bdb3-756eeacdde81</dependsOn>
     </asset>
     <asset name="Policy.61926066-0c83-4859-bdb3-756eeacdde81" displayName="Policy For API Math2Demo[1]" isDeployable="true">
         <implementation.generic type="Policy"/>
@@ -57,24 +58,22 @@
         <dependsOn>APIGateway:API.fba20861-453f-4918-9d79-1c04ec3c4bcb</dependsOn>
         <dependsOn>APIGateway:PassmanData.API_ACCESS_KEY0969eb22-aef6-4d95-b8c1-5aa277746d44</dependsOn>
     </asset>
-    <asset name="API.fba20861-453f-4918-9d79-1c04ec3c4bcb" displayName="Math2Demo[1]" isDeployable="true">
-        <implementation.generic type="API"/>
-        <dependsOn>APIGateway:Application.0969eb22-aef6-4d95-b8c1-5aa277746d44</dependsOn>
-        <dependsOn>APIGateway:Application.c629102f-8a81-46a4-9151-cfd57c4b96b5</dependsOn>
-        <dependsOn>APIGateway:Policy.61926066-0c83-4859-bdb3-756eeacdde81</dependsOn>
-    </asset>
-    <asset name="Application.c629102f-8a81-46a4-9151-cfd57c4b96b5" displayName="soapui" isDeployable="true">
-        <implementation.generic type="Application"/>
-        <dependsOn>APIGateway:API.fba20861-453f-4918-9d79-1c04ec3c4bcb</dependsOn>
-        <dependsOn>APIGateway:PassmanData.API_ACCESS_KEYc629102f-8a81-46a4-9151-cfd57c4b96b5</dependsOn>
+    <asset name="PassmanData.API_ACCESS_KEY0969eb22-aef6-4d95-b8c1-5aa277746d44" displayName="API_ACCESS_KEY0969eb22-aef6-4d95-b8c1-5aa277746d44" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
     </asset>
     <asset name="PassmanData.API_ACCESS_KEYc629102f-8a81-46a4-9151-cfd57c4b96b5" displayName="API_ACCESS_KEYc629102f-8a81-46a4-9151-cfd57c4b96b5" isDeployable="true">
         <implementation.generic type="PassmanData"/>
     </asset>
-    <asset name="PassmanData.API_ACCESS_KEY0969eb22-aef6-4d95-b8c1-5aa277746d44" displayName="API_ACCESS_KEY0969eb22-aef6-4d95-b8c1-5aa277746d44" isDeployable="true">
-        <implementation.generic type="PassmanData"/>
+    <asset name="PolicyAction.GlobalLogInvocationPolicyAction" displayName="Policy Action [Log Invocation] -&gt; Transaction logging" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.mobileApp" displayName="mobileApp" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
     </asset>
     <asset name="AdministratorSetting.HTTPListener@9955" displayName="HTTPListener@9955" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AdministratorSetting.cache" displayName="cache" isDeployable="true">
         <implementation.generic type="AdministratorSetting"/>
     </asset>
     <asset name="AdministratorSetting.HTTPListener@9959" displayName="HTTPListener@9959" isDeployable="true">
@@ -83,7 +82,8 @@
     <asset name="Alias.cbee2a4d-3815-4c48-af48-bc302446d365" displayName="OKTA" isDeployable="true">
         <implementation.generic type="Alias"/>
     </asset>
-    <asset name="AdministratorSetting.cache" displayName="cache" isDeployable="true">
-        <implementation.generic type="AdministratorSetting"/>
+    <asset name="Policy.GlobalLogInvocationPolicy" displayName="Transaction logging[Global Policy]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.GlobalLogInvocationPolicyAction</dependsOn>
     </asset>
 </asset_composite>
