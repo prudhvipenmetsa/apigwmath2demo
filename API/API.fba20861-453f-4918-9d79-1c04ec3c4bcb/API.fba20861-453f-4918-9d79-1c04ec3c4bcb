@@ -7,52 +7,6 @@
     "nativeUri" : [ "http://webm101.prudhvi.com:9955/ws/APIGatewayDemo.ws:demo2/APIGatewayDemo_ws_demo2_Port" ],
     "serviceName" : "Math2Demo",
     "operationsInfo" : [ {
-      "name" : "addInts",
-      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "APIGatewayDemo_ws_demo2_Binder",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<apig:addIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:addIntsInput>",
-        "outputMessage" : "<apig:addIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <value>string</value>\n</apig:addIntsOutput>"
-      } ],
-      "mockedResponses" : { },
-      "mockedConditionsBasedCustomResponsesList" : [ ],
-      "defined" : true,
-      "soapAction" : "APIGatewayDemo_ws_demo2_Binder_addInts",
-      "isRESTInvokeEnabled" : false,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "parameters" : [ {
-            "in" : "body",
-            "required" : false,
-            "examples" : {
-              "application/json" : "{\"addIntsInput\":{\"num1\":\"string\",\"num2\":\"string\"}}",
-              "application/xml" : "<apig:addIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:addIntsInput>"
-            }
-          } ],
-          "responses" : {
-            "200" : {
-              "examples" : {
-                "application/json" : "{\"addIntsOutput\":{\"value\":\"string\"}}",
-                "application/xml" : "<apig:addIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <value>string</value>\n</apig:addIntsOutput>"
-              }
-            }
-          },
-          "mockedResponses" : { },
-          "mockedConditionsBasedCustomResponsesList" : [ ],
-          "enabled" : true
-        },
-        "parameters" : [ ],
-        "enabled" : true,
-        "name" : "addInts",
-        "invokePath" : "/addInts"
-      },
-      "scopes" : [ ]
-    }, {
       "name" : "max",
       "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2",
       "enabled" : true,
@@ -96,6 +50,52 @@
         "enabled" : true,
         "name" : "max",
         "invokePath" : "/max"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "addInts",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_demo2_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:addIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:addIntsInput>",
+        "outputMessage" : "<apig:addIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <value>string</value>\n</apig:addIntsOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_demo2_Binder_addInts",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"addIntsInput\":{\"num1\":\"string\",\"num2\":\"string\"}}",
+              "application/xml" : "<apig:addIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:addIntsInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"addIntsOutput\":{\"value\":\"string\"}}",
+                "application/xml" : "<apig:addIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <value>string</value>\n</apig:addIntsOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "addInts",
+        "invokePath" : "/addInts"
       },
       "scopes" : [ ]
     }, {
@@ -156,7 +156,7 @@
   } ],
   "apiName" : "Math2Demo",
   "apiVersion" : "1",
-  "apiDescription" : "Added to test the  build From Jenkins Modified 11:04 PM",
+  "apiDescription" : "Added to test the  build From Jenkins Modified 11:08 PM",
   "maturityState" : "Beta",
   "isActive" : false,
   "type" : "SOAP",
@@ -168,7 +168,7 @@
   "scopes" : [ ],
   "publishedPortals" : [ ],
   "creationDate" : "2018-07-04 20:00:13 GMT",
-  "lastModified" : "2018-07-05 03:04:45 GMT",
+  "lastModified" : "2018-07-05 03:08:23 GMT",
   "systemVersion" : 1,
   "id" : "fba20861-453f-4918-9d79-1c04ec3c4bcb"
 }

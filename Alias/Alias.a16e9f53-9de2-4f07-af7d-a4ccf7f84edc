@@ -3,6 +3,7 @@
   "id" : "a16e9f53-9de2-4f07-af7d-a4ccf7f84edc",
   "name" : "DEMOMATH_ENDPOINT",
   "type" : "endpoint",
+  "stage" : "",
   "owner" : "Administrator",
   "endPointURI" : "http://webm101.prudhvi.com:9955/ws/APIGatewayDemo.ws:demo2/APIGatewayDemo_ws_demo2_Port",
   "connectionTimeout" : 30,

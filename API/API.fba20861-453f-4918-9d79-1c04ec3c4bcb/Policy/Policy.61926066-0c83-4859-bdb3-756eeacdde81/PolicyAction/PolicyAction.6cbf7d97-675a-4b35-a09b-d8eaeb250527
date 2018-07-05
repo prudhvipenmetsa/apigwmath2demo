@@ -20,7 +20,7 @@
         "values" : [ "Administrator" ]
       }, {
         "templateKey" : "password",
-        "values" : [ "KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKio=" ]
+        "values" : [ "********************************" ]
       } ]
     } ]
   } ],
