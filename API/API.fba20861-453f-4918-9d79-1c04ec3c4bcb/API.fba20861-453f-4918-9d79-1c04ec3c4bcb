@@ -7,52 +7,6 @@
     "nativeUri" : [ "http://webm101.prudhvi.com:9955/ws/APIGatewayDemo.ws:demo2/APIGatewayDemo_ws_demo2_Port" ],
     "serviceName" : "Math2Demo",
     "operationsInfo" : [ {
-      "name" : "min",
-      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2",
-      "enabled" : true,
-      "bindings" : [ {
-        "name" : "APIGatewayDemo_ws_demo2_Binder",
-        "type" : "soap",
-        "specifier" : "",
-        "inputMessage" : "<apig:minInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:minInput>",
-        "outputMessage" : "<apig:minOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <minValue>string</minValue>\n</apig:minOutput>"
-      } ],
-      "mockedResponses" : { },
-      "mockedConditionsBasedCustomResponsesList" : [ ],
-      "defined" : true,
-      "soapAction" : "APIGatewayDemo_ws_demo2_Binder_min",
-      "isRESTInvokeEnabled" : false,
-      "restEnabledPath" : {
-        "post" : {
-          "consumes" : [ "application/json", "application/xml" ],
-          "produces" : [ "application/json", "application/xml" ],
-          "parameters" : [ {
-            "examples" : {
-              "application/xml" : "<apig:minInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:minInput>",
-              "application/json" : "{\"minInput\":{\"numList\":\"string\"}}"
-            },
-            "in" : "body",
-            "required" : false
-          } ],
-          "responses" : {
-            "200" : {
-              "examples" : {
-                "application/xml" : "<apig:minOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <minValue>string</minValue>\n</apig:minOutput>",
-                "application/json" : "{\"minOutput\":{\"minValue\":\"string\"}}"
-              }
-            }
-          },
-          "mockedResponses" : { },
-          "mockedConditionsBasedCustomResponsesList" : [ ],
-          "enabled" : true
-        },
-        "parameters" : [ ],
-        "enabled" : true,
-        "name" : "min",
-        "invokePath" : "/min"
-      },
-      "scopes" : [ ]
-    }, {
       "name" : "addInts",
       "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2",
       "enabled" : true,
@@ -73,18 +27,18 @@
           "consumes" : [ "application/json", "application/xml" ],
           "produces" : [ "application/json", "application/xml" ],
           "parameters" : [ {
-            "examples" : {
-              "application/xml" : "<apig:addIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:addIntsInput>",
-              "application/json" : "{\"addIntsInput\":{\"num1\":\"string\",\"num2\":\"string\"}}"
-            },
             "in" : "body",
-            "required" : false
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"addIntsInput\":{\"num1\":\"string\",\"num2\":\"string\"}}",
+              "application/xml" : "<apig:addIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:addIntsInput>"
+            }
           } ],
           "responses" : {
             "200" : {
               "examples" : {
-                "application/xml" : "<apig:addIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <value>string</value>\n</apig:addIntsOutput>",
-                "application/json" : "{\"addIntsOutput\":{\"value\":\"string\"}}"
+                "application/json" : "{\"addIntsOutput\":{\"value\":\"string\"}}",
+                "application/xml" : "<apig:addIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <value>string</value>\n</apig:addIntsOutput>"
               }
             }
           },
@@ -119,18 +73,18 @@
           "consumes" : [ "application/json", "application/xml" ],
           "produces" : [ "application/json", "application/xml" ],
           "parameters" : [ {
-            "examples" : {
-              "application/xml" : "<apig:maxInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:maxInput>",
-              "application/json" : "{\"maxInput\":{\"numList\":\"string\"}}"
-            },
             "in" : "body",
-            "required" : false
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"maxInput\":{\"numList\":\"string\"}}",
+              "application/xml" : "<apig:maxInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:maxInput>"
+            }
           } ],
           "responses" : {
             "200" : {
               "examples" : {
-                "application/xml" : "<apig:maxOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <maxValue>string</maxValue>\n</apig:maxOutput>",
-                "application/json" : "{\"maxOutput\":{\"maxValue\":\"string\"}}"
+                "application/json" : "{\"maxOutput\":{\"maxValue\":\"string\"}}",
+                "application/xml" : "<apig:maxOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <maxValue>string</maxValue>\n</apig:maxOutput>"
               }
             }
           },
@@ -142,6 +96,52 @@
         "enabled" : true,
         "name" : "max",
         "invokePath" : "/max"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "min",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_demo2_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:minInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:minInput>",
+        "outputMessage" : "<apig:minOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <minValue>string</minValue>\n</apig:minOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_demo2_Binder_min",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"minInput\":{\"numList\":\"string\"}}",
+              "application/xml" : "<apig:minInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:minInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"minOutput\":{\"minValue\":\"string\"}}",
+                "application/xml" : "<apig:minOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <minValue>string</minValue>\n</apig:minOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "min",
+        "invokePath" : "/min"
       },
       "scopes" : [ ]
     } ],
@@ -156,7 +156,7 @@
   } ],
   "apiName" : "Math2Demo",
   "apiVersion" : "1",
-  "apiDescription" : "Added to test the  build",
+  "apiDescription" : "Added to test the  build From Jenkins",
   "maturityState" : "Beta",
   "isActive" : false,
   "type" : "SOAP",
@@ -168,7 +168,7 @@
   "scopes" : [ ],
   "publishedPortals" : [ ],
   "creationDate" : "2018-07-04 20:00:13 GMT",
-  "lastModified" : "2018-07-05 01:30:12 GMT",
+  "lastModified" : "2018-07-05 02:30:57 GMT",
   "systemVersion" : 1,
   "id" : "fba20861-453f-4918-9d79-1c04ec3c4bcb"
 }
