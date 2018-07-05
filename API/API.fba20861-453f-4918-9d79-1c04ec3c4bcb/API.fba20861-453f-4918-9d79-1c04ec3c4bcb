@@ -1,0 +1,174 @@
+{
+  "type" : "SOAP",
+  "apiDefinition" : {
+    "type" : "soap",
+    "wsdl" : "<wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:soapjms=\"http://www.w3.org/2010/soapjms/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:tns=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" name=\"demo2\" targetNamespace=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <wsdl:types>\n    <xsd:schema targetNamespace=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n          <xsd:element name=\"addIntsInput\" type=\"tns:addIntsInput\"/>\n          <xsd:element name=\"addIntsOutput\" type=\"tns:addIntsOutput\"/>\n          <xsd:element name=\"maxInput\" type=\"tns:maxInput\"/>\n          <xsd:element name=\"maxOutput\" type=\"tns:maxOutput\"/>\n          <xsd:element name=\"minInput\" type=\"tns:minInput\"/>\n          <xsd:element name=\"minOutput\" type=\"tns:minOutput\"/>\n          <xsd:complexType name=\"addIntsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addIntsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"maxInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"maxOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"maxValue\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"minInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"minOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"minValue\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n        \t</xsd:schema>\n  </wsdl:types>\n  <wsdl:message name=\"demo2_PortType_minInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:minInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"demo2_PortType_minOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:minOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"demo2_PortType_addIntsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addIntsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"demo2_PortType_addIntsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addIntsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"demo2_PortType_maxInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:maxInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"demo2_PortType_maxOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:maxOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:portType name=\"demo2_PortType\">\n    <wsdl:operation name=\"min\">\n      <wsdl:input message=\"tns:demo2_PortType_minInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:demo2_PortType_minOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addInts\">\n      <wsdl:input message=\"tns:demo2_PortType_addIntsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:demo2_PortType_addIntsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"max\">\n      <wsdl:input message=\"tns:demo2_PortType_maxInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:demo2_PortType_maxOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n  </wsdl:portType>\n  <wsdl:binding name=\"APIGatewayDemo_ws_demo2_Binder\" type=\"tns:demo2_PortType\">\n    <soap:binding style=\"document\" transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n    <wsdl:operation name=\"min\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_demo2_Binder_min\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addInts\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_demo2_Binder_addInts\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"max\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_demo2_Binder_max\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n  </wsdl:binding>\n  <wsdl:service name=\"APIGatewayDemo.ws.demo2\">\n    <wsdl:port name=\"APIGatewayDemo_ws_demo2_Port\" binding=\"tns:APIGatewayDemo_ws_demo2_Binder\">\n      <soap:address location=\"http://webm101.prudhvi.com:9955/ws/APIGatewayDemo.ws:demo2/APIGatewayDemo_ws_demo2_Port\"/>\n    </wsdl:port>\n  </wsdl:service>\n</wsdl:definitions>",
+    "baseWsdlUri" : "/opt/api102/IntegrationServer/instances/default/temp/1530751742432/",
+    "nativeUri" : [ "http://webm101.prudhvi.com:9955/ws/APIGatewayDemo.ws:demo2/APIGatewayDemo_ws_demo2_Port" ],
+    "serviceName" : "Math2Demo",
+    "operationsInfo" : [ {
+      "name" : "min",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_demo2_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:minInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:minInput>",
+        "outputMessage" : "<apig:minOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <minValue>string</minValue>\n</apig:minOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_demo2_Binder_min",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "examples" : {
+              "application/xml" : "<apig:minInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:minInput>",
+              "application/json" : "{\"minInput\":{\"numList\":\"string\"}}"
+            },
+            "in" : "body",
+            "required" : false
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/xml" : "<apig:minOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <minValue>string</minValue>\n</apig:minOutput>",
+                "application/json" : "{\"minOutput\":{\"minValue\":\"string\"}}"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "min",
+        "invokePath" : "/min"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "addInts",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_demo2_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:addIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:addIntsInput>",
+        "outputMessage" : "<apig:addIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <value>string</value>\n</apig:addIntsOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_demo2_Binder_addInts",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "examples" : {
+              "application/xml" : "<apig:addIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:addIntsInput>",
+              "application/json" : "{\"addIntsInput\":{\"num1\":\"string\",\"num2\":\"string\"}}"
+            },
+            "in" : "body",
+            "required" : false
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/xml" : "<apig:addIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <value>string</value>\n</apig:addIntsOutput>",
+                "application/json" : "{\"addIntsOutput\":{\"value\":\"string\"}}"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "addInts",
+        "invokePath" : "/addInts"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "max",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_demo2_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:maxInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:maxInput>",
+        "outputMessage" : "<apig:maxOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <maxValue>string</maxValue>\n</apig:maxOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_demo2_Binder_max",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "examples" : {
+              "application/xml" : "<apig:maxInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:maxInput>",
+              "application/json" : "{\"maxInput\":{\"numList\":\"string\"}}"
+            },
+            "in" : "body",
+            "required" : false
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/xml" : "<apig:maxOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <maxValue>string</maxValue>\n</apig:maxOutput>",
+                "application/json" : "{\"maxOutput\":{\"maxValue\":\"string\"}}"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "max",
+        "invokePath" : "/max"
+      },
+      "scopes" : [ ]
+    } ],
+    "type" : "soap",
+    "isRESTInvokeEnabled" : false
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://webm101.prudhvi.com:9955/ws/APIGatewayDemo.ws:demo2/APIGatewayDemo_ws_demo2_Port",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "Math2Demo",
+  "apiVersion" : "1",
+  "apiDescription" : "Added to test the  build",
+  "maturityState" : "Beta",
+  "isActive" : false,
+  "type" : "SOAP",
+  "owner" : "Administrator",
+  "policies" : [ "61926066-0c83-4859-bdb3-756eeacdde81" ],
+  "referencedFiles" : {
+    "Math2Demo.wsdl" : "<wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:soapjms=\"http://www.w3.org/2010/soapjms/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:tns=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" name=\"demo2\" targetNamespace=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n  <wsdl:types>\n    <xsd:schema targetNamespace=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:demo2\">\n          <xsd:element name=\"addIntsInput\" type=\"tns:addIntsInput\"/>\n          <xsd:element name=\"addIntsOutput\" type=\"tns:addIntsOutput\"/>\n          <xsd:element name=\"maxInput\" type=\"tns:maxInput\"/>\n          <xsd:element name=\"maxOutput\" type=\"tns:maxOutput\"/>\n          <xsd:element name=\"minInput\" type=\"tns:minInput\"/>\n          <xsd:element name=\"minOutput\" type=\"tns:minOutput\"/>\n          <xsd:complexType name=\"addIntsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addIntsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"maxInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"maxOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"maxValue\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"minInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"minOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"minValue\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n        \t</xsd:schema>\n  </wsdl:types>\n  <wsdl:message name=\"demo2_PortType_minInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:minInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"demo2_PortType_minOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:minOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"demo2_PortType_addIntsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addIntsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"demo2_PortType_addIntsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addIntsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"demo2_PortType_maxInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:maxInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"demo2_PortType_maxOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:maxOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:portType name=\"demo2_PortType\">\n    <wsdl:operation name=\"min\">\n      <wsdl:input message=\"tns:demo2_PortType_minInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:demo2_PortType_minOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addInts\">\n      <wsdl:input message=\"tns:demo2_PortType_addIntsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:demo2_PortType_addIntsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"max\">\n      <wsdl:input message=\"tns:demo2_PortType_maxInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:demo2_PortType_maxOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n  </wsdl:portType>\n  <wsdl:binding name=\"APIGatewayDemo_ws_demo2_Binder\" type=\"tns:demo2_PortType\">\n    <soap:binding style=\"document\" transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n    <wsdl:operation name=\"min\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_demo2_Binder_min\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addInts\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_demo2_Binder_addInts\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"max\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_demo2_Binder_max\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n  </wsdl:binding>\n  <wsdl:service name=\"APIGatewayDemo.ws.demo2\">\n    <wsdl:port name=\"APIGatewayDemo_ws_demo2_Port\" binding=\"tns:APIGatewayDemo_ws_demo2_Binder\">\n      <soap:address location=\"http://webm101.prudhvi.com:9955/ws/APIGatewayDemo.ws:demo2/APIGatewayDemo_ws_demo2_Port\"/>\n    </wsdl:port>\n  </wsdl:service>\n</wsdl:definitions>"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2018-07-04 20:00:13 GMT",
+  "lastModified" : "2018-07-05 01:30:12 GMT",
+  "systemVersion" : 1,
+  "id" : "fba20861-453f-4918-9d79-1c04ec3c4bcb"
+}

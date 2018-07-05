@@ -1,0 +1,31 @@
+{
+  "id" : "61926066-0c83-4859-bdb3-756eeacdde81",
+  "names" : [ {
+    "value" : "Default Policy for API Math2Demo",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "8f713b55-99e4-4c3c-a075-4a4568675102"
+    }, {
+      "enforcementObjectId" : "6cbf7d97-675a-4b35-a09b-d8eaeb250527"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "a90a427f-d3f8-4ca8-8f12-a27756f3de96"
+    } ],
+    "stageKey" : "transport"
+  } ],
+  "policyScope" : "SERVICE",
+  "systemPolicy" : false,
+  "active" : false,
+  "global" : false
+}

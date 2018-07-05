@@ -1,0 +1,38 @@
+{
+  "applicationID" : "0969eb22-aef6-4d95-b8c1-5aa277746d44",
+  "name" : "postman",
+  "owner" : "Administrator",
+  "identifiers" : [ {
+    "id" : "2a60348f-83d7-4bbb-8f21-a9f9d4738329",
+    "key" : "httpBasicAuth",
+    "swaggerName" : "",
+    "swaggerValue" : [ ],
+    "namedValues" : [ {
+      "name" : "Username",
+      "values" : [ "postman" ]
+    } ]
+  } ],
+  "contactEmails" : [ ],
+  "accessTokens" : {
+    "apiAccessKey" : {
+      "apiAccessKey" : "d0b5f3b2e0d698fbbd5ba131bfad3e673adfb4101452302473390d87f6468102"
+    },
+    "oauth2Token" : {
+      "type" : "confidential",
+      "clientId" : "7ae0dd9d-c19a-4742-8fdf-9735b77db0de",
+      "clientSecret" : "********************************",
+      "clientName" : "postman-5cde6882-2f6c-4e80-bf2b-7afa28d29883",
+      "scopes" : [ "fba20861-453f-4918-9d79-1c04ec3c4bcb" ],
+      "expirationInterval" : "3600",
+      "refreshCount" : "0",
+      "accessTokenRequestURI" : [ ],
+      "redirectUris" : [ "https://placeholder_redirect_uri" ]
+    }
+  },
+  "creationDate" : "2018-07-04 20:03:23 GMT",
+  "siteURLs" : [ ],
+  "jsOrigins" : [ ],
+  "version" : "1.0",
+  "isSuspended" : false,
+  "subscription" : false
+}

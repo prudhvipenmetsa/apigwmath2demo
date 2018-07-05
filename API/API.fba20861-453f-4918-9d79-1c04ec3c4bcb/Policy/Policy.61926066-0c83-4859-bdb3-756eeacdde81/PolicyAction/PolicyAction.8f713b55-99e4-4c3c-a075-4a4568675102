@@ -1,0 +1,19 @@
+{
+  "id" : "8f713b55-99e4-4c3c-a075-4a4568675102",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "${DEMOMATH_ENDPOINT}" ]
+  }, {
+    "templateKey" : "soapOptimize",
+    "values" : [ "None" ]
+  }, {
+    "templateKey" : "passSecurityHeaders",
+    "values" : [ "false" ]
+  } ],
+  "active" : false
+}

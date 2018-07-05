@@ -1,0 +1,19 @@
+{
+  "type" : "clientMetadataMapping",
+  "id" : "194b1272-a0dd-4cd1-a9c3-3e2e5aaf1afb",
+  "name" : "PingFederate",
+  "type" : "clientMetadataMapping",
+  "owner" : "Administrator",
+  "providerName" : "PingFederate",
+  "implNames" : { },
+  "extendedValues" : { },
+  "extendedValuesV2" : [ {
+    "endpointType" : "CLIENT_REGISTRATION",
+    "key" : "restrictScopes",
+    "value" : "true"
+  }, {
+    "endpointType" : "CLIENT_UPDATE",
+    "key" : "restrictScopes",
+    "value" : "true"
+  } ]
+}
